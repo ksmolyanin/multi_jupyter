@@ -1,0 +1,11 @@
+{
+    "codeCellConfig": {
+        "fontSize": 16,
+    },
+    "markdownCellConfig": {
+        "fontSize": 16,
+    },
+    "rawCellConfig": {
+        "fontSize": 16,
+    }
+}
