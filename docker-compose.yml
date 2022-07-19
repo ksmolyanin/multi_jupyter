@@ -15,3 +15,15 @@ services:
                 --no-browser
         volumes:
             - ./notebooks:/opt/notebooks
+    postgres_server:
+        build:
+            context: ./postgres
+        image: just-doc-it-postgres:1.0.0
+        ports:
+            - ${DB_PORT:-5432}:5432
+        environment:
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+            - DB_NAME=${DB_NAME}
+            - DB_USER=${DB_USER}
+            - DB_PASSWORD=${DB_PASSWORD}
+            - SCHEMA_NAME=${SCHEMA_NAME}

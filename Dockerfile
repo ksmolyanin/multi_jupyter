@@ -13,6 +13,8 @@ RUN jupyter labextension install transient-display-data
 RUN jupyter labextension install jupyterlab-sos
 RUN npm install --location=global ijavascript
 RUN ijsinstall
+RUN apt-get install -y libpq-dev postgresql-client
+RUN pip install ipython-sql
 RUN poetry config virtualenvs.create false
 COPY poetry.lock .
 COPY pyproject.toml .
